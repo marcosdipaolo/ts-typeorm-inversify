@@ -1,5 +1,6 @@
 ### Get Users
 GET http://localhost:3000/users HTTP/1.1
+
 ### Get User
 GET http://localhost:3000/users/2bb65ab3-cc42-40a8-b693-451781532851 HTTP/1.1
 ### Create user
