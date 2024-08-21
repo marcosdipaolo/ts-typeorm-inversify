@@ -28,11 +28,10 @@ class UserController extends BaseController<User> {
   }
   @httpGet("/:id")
   async getUser(@requestParam("id") id: string): Promise<JsonResult> {
-    return this.json(
-      await this.repository.findOne({
-        where: { id },
-      }),
-    );
+    const user = await this.repository.findOne({
+      where: { id },
+    });
+    return this.json(user, user ? 200 : 404);
   }
   @httpPost("/")
   async createUser(
