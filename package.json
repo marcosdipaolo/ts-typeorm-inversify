@@ -4,6 +4,7 @@
     "typeorm": "typeorm-ts-node-commonjs",
     "initial-migration": "yarn typeorm migration:generate src/db/migrations/Initial -d src/connection.ts",
     "migrate": "yarn typeorm migration:run -d src/connection.ts",
+    "dev-migrate": "DB_HOST=localhost DB_PORT=33060 DB_USER=root DB_PASSWORD=tstypeorm DB_NAME=tstypeorm yarn migrate",
     "migrate:undo": "yarn typeorm migration:revert -d src/connection.ts",
     "start": "NODE_ENV=production yarn build && node build/index.js",
     "lint": "eslint . --fix",

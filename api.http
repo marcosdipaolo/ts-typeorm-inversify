@@ -18,3 +18,14 @@ Content-Type: application/json
 {
     "name": "Carlitos"
 }
+
+### Add Order to User
+POST http://localhost:3000/users/12f370bc-0468-43ea-bd78-13407d614f15/orders HTTP/1.1
+Content-Type: application/json
+
+{
+    "products": [
+        {"name": "Fun Calculator", "price": 13800},
+        {"name": "Car Wheels", "price": 24.99}
+    ]
+}
